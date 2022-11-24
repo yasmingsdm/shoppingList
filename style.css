@@ -1,0 +1,50 @@
+body{
+    font-family: "Comic Sans", "Comic Sans MS", serif;
+    background-color: blanchedalmond;
+    color: #800020;
+}
+
+h1{
+    text-align: center;
+}
+
+.anotar{
+    text-align: center;
+}
+
+.onde{
+    margin-bottom: 20px;;
+}
+
+/*Erase the style from the input*/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+  }
+
+/*Create a style for explorer, chrome, safari and opera*/
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #800020
+    border-radius: 10px;
+}
+
+/*Create a style for firefox*/
+input[type="range"]::-moz-range-track{
+    background: #800020;
+    border-radius: 10px;
+}
+
+.listas{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px;
+}
+
+.lugar{
+    margin-top: 20px;
+    border: dotted 2px #800020;
+    text-align: center;
+}
