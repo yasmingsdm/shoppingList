@@ -6,8 +6,8 @@
     </head>
     <body>
         <h1>Lista de Compras</h1>
-        <section class="anotar">
-            <input type="text" placeholder="O que você precisa comprar?" size="30" required>
+        <form class="anotar" id="form">
+            <input type="text" placeholder="O que você precisa comprar?" size="30" required id="item">
             <p>Onde comprar?</p>
             <input type="radio" id="oob" value="oob" name="onde">
             <label for="oob">Öob</label>
@@ -20,19 +20,24 @@
             <br>
             <label for="prioridade">Prioridade:</label>
             <input type="range" name="prioridade" id="prioridade" min="0" max="10">
-        </section>
+            <button type="submit" onclick="colocarNaLista()">Adicionar a lista</button>
+        </form>
         <section class="listas">
             <div class=" lugar mercado">
                 <h2>Mercado</h2>
+                <p id="lista-mercado"></p>
             </div>
-            <div class="lugar oob">
+            <div class="lugar oob" id="lugarOob">
                 <h2>Öob</h2>
+                <p id="lista-oob"></p>
             </div>
             <div class="lugar normal">
                 <h2>Normal</h2>
+                <p id="lista-normal"></p>
             </div>
             <div class="lugar outro">
                 <h2>Outro </h2>
+                <p id="lista-outro"></p>
             </div>
         </section>
         <script src="./script.js"></script>
