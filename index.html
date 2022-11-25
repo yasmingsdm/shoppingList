@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Lista de Compras</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>Lista de Compras</h1>
+        <section class="anotar">
+            <input type="text" placeholder="O que você precisa comprar?" size="30" required>
+            <p>Onde comprar?</p>
+            <input type="radio" id="oob" value="oob" name="onde">
+            <label for="oob">Öob</label>
+            <input type="radio" id="normal" value="normal" name="onde">
+            <label for="normal">Normal</label>
+            <input type="radio" id="mercado" value="mercado" name="onde">
+            <label for="mercado">Mercado</label>
+            <input type="radio" id="outro" value="outro" name="onde" class="onde">
+            <label for="outro" class="onde">Outro</label>
+            <br>
+            <label for="prioridade">Prioridade:</label>
+            <input type="range" name="prioridade" id="prioridade" min="0" max="10">
+        </section>
+        <section class="listas">
+            <div class=" lugar mercado">
+                <h2>Mercado</h2>
+            </div>
+            <div class="lugar oob">
+                <h2>Öob</h2>
+            </div>
+            <div class="lugar normal">
+                <h2>Normal</h2>
+            </div>
+            <div class="lugar outro">
+                <h2>Outro </h2>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</html>
