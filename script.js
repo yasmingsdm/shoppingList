@@ -36,11 +36,12 @@ function colocarNaLista(){
         item = item.bold()
     }
 
-    //Escrever na coluna certa:
+   
 
+    //Escrever na coluna certa:
     if (onde=='oob'){
         itemOob.push(item)
-        document.getElementById('lista-oob').innerHTML = itemOob+ '<br>'
+        document.getElementById('lista-oob').innerHTML += '<li onClick="item1()">' + item + '</li>'
     } else if (onde == 'normal'){
         itemNormal.push(item)
         document.getElementById('lista-normal').innerHTML = itemNormal
@@ -52,4 +53,9 @@ function colocarNaLista(){
         document.getElementById('lista-outro').innerHTML = itemOutro
     }
 
+
+}
+
+const item1 = () => {
+    console.log ('yeah')
 }
