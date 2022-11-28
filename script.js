@@ -32,16 +32,15 @@ function colocarNaLista(){
     if (prioridade >5){
         item = item.toUpperCase()
     }
-    if (onde==oob && prioridade == 10){
-        document.getElementById('lugarOob').style.border = '5px dotted red'
+    if (prioridade == 10){
+        item = item.bold()
     }
 
     //Escrever na coluna certa:
 
-
     if (onde=='oob'){
         itemOob.push(item)
-        document.getElementById('lista-oob').innerHTML = itemOob + '<br>'
+        document.getElementById('lista-oob').innerHTML = itemOob+ '<br>'
     } else if (onde == 'normal'){
         itemNormal.push(item)
         document.getElementById('lista-normal').innerHTML = itemNormal
