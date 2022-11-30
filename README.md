@@ -1,6 +1,6 @@
 ## Shopping List - NOT READY YET
 
-This project goal's was to create a sopphing list where you can add items and where to buy it. 
+This project goal's was to create a shopping list where you can add items and where to buy it. 
 
 I used HTML, CSS and JavaScript.
 
