@@ -28,7 +28,7 @@ function colocarNaLista(){
     let prioridade = document.getElementById('prioridade').value
 
     //Prioridades:
-    console.log(prioridade)
+    
     if (prioridade >5){
         item = item.toUpperCase()
     }
@@ -41,21 +41,47 @@ function colocarNaLista(){
     //Escrever na coluna certa:
     if (onde=='oob'){
         itemOob.push(item)
-        document.getElementById('lista-oob').innerHTML += '<li onClick="item1()">' + item + '</li>'
+        document.getElementById('lista-oob').innerHTML += '<li onClick=item1(item.value) id='+ item +'>' + item + '</li>'
     } else if (onde == 'normal'){
         itemNormal.push(item)
-        document.getElementById('lista-normal').innerHTML = itemNormal
+        document.getElementById('lista-normal').innerHTML += '<li onClick=item1(item.value) id=' + item +'>' + item + '</li>'
     } else if (onde == 'mercado'){
         itemMercado.push(item)
-        document.getElementById('lista-mercado').innerHTML = itemMercado
-    }else{
+        document.getElementById('lista-mercado').innerHTML += '<li onClick=item1(item.value) id=' + item +'>' + item + '</li>'
+    }else if (onde == 'outro'){
         itemOutro.push(item)
-        document.getElementById('lista-outro').innerHTML = itemOutro
+        document.getElementById('lista-outro').innerHTML += '<li onClick=item1(item.value) id=' + item +'>' + item + '</li>'
     }
 
+}
+
+//Riscar a lista:
+
+const item1 = (item) => {
+    console.log(item)
+    document.getElementById(item).style.textDecoration = 'line-through'
+    item = ''
 
 }
 
-const item1 = () => {
-    console.log ('yeah')
+//Apagar lista:
+const doneMercado = ()=>{
+    itemMercado = []
+    document.getElementById('lista-mercado').innerHTML = ' '
 }
+
+const doneOob = ()=>{
+   itemOob = []
+   document.getElementById('lista-oob').innerHTML = ' '
+}
+
+const doneNormal = ()=>{
+    itemNormal = []
+    document.getElementById('lista-normal').innerHTML = ' '
+}
+
+const doneOutro = ()=>{
+    itemOutro = []
+    document.getElementById('lista-outro').innerHTML = ' '
+}
+
