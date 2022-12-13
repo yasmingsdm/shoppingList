@@ -41,52 +41,44 @@ function colocarNaLista(){
     //Escrever na coluna certa:
     if (onde=='oob'){
         itemOob.push(item)
-        document.getElementById('lista-oob').innerHTML += '<li onClick="item1()">' + item + '</li>'
+        document.getElementById('lista-oob').innerHTML += '<li onClick=item1(item.value) id='+item +'>' + item + '</li>'
     } else if (onde == 'normal'){
         itemNormal.push(item)
-        document.getElementById('lista-normal').innerHTML += '<li onClick="item2()">' + item + '</li>'
+        document.getElementById('lista-normal').innerHTML += '<li onClick=item1(item.value) id=' +item+'>' + item + '</li>'
     } else if (onde == 'mercado'){
         itemMercado.push(item)
-        document.getElementById('lista-mercado').innerHTML += '<li onClick="item3()">' + item + '</li>'
+        document.getElementById('lista-mercado').innerHTML += '<li onClick="item1()">' + item + '</li>'
     }else{
         itemOutro.push(item)
-        document.getElementById('lista-outro').innerHTML += '<li onClick="item4()">' + item + '</li>'
+        document.getElementById('lista-outro').innerHTML += '<li onClick="item1()">' + item + '</li>'
     }
-
 
 }
 
 //Riscar a lista:
 
-const item1 = () => {
-    document.getElementById('lista-oob').style.textDecoration = 'line-through'
-}
+const item1 = (item) => {
+    console.log(item)
+    document.getElementById(item).style.textDecoration = 'line-through'
+    item = ''
 
-const item2 = () => {
-    document.getElementById('lista-normal').style.textDecoration = 'line-through'
-}
-
-const item3 = () => {
-    document.getElementById('lista-mercado').style.textDecoration = 'line-through'
-}
-
-const item4 = () => {
-    document.getElementById('lista-outro').style.textDecoration = 'line-through'
 }
 
 //Apagar lista:
 const doneMercado = ()=>{
-    document.getElementById('lista-mercado').remove()
+    itemMercado = []
 }
 
 const doneOob = ()=>{
-    document.getElementById('lista-oob').remove()
+   itemOob = []
 }
 
 const doneNormal = ()=>{
-    document.getElementById('lista-normal').remove()
+    itemNormal = []
+    document.getElementById('lista-normal').innerHTML = ' '
 }
 
 const doneOutro = ()=>{
-    document.getElementById('lista-outro').remove()
+    itemOutro = []
 }
+
