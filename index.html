@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <title>Lista de Compras</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <h1>Lista de Compras</h1>
-        <form class="anotar" id="form">
-            <input type="text" placeholder="O que você precisa comprar?" size="30" required id="item">
-            <p>Onde comprar?</p>
-            <input type="radio" id="oob" value="oob" name="onde">
-            <label for="oob">Öob</label>
-            <input type="radio" id="normal" value="normal" name="onde">
-            <label for="normal">Normal</label>
-            <input type="radio" id="mercado" value="mercado" name="onde">
-            <label for="mercado">Mercado</label>
-            <input type="radio" id="outro" value="outro" name="onde" class="onde">
-            <label for="outro" class="onde">Outro</label>
-            <br>
-            <label for="prioridade">Prioridade:</label>
-            <input type="range" name="prioridade" id="prioridade" min="0" max="10">
-            <button type="submit" onclick="colocarNaLista()">Adicionar a lista</button>
-        </form>
-        <section class="listas">
-            <div class=" lugar mercado">
-                <h2>Mercado</h2>
-                <p id="lista-mercado"></p>
-            </div>
-            <div class="lugar oob" id="lugarOob">
-                <h2>Öob</h2>
-                <ul id="lista-oob"></ul>
-            </div>
-            <div class="lugar normal">
-                <h2>Normal</h2>
-                <p id="lista-normal"></p>
-            </div>
-            <div class="lugar outro">
-                <h2>Outro </h2>
-                <p id="lista-outro"></p>
-            </div>
-        </section>
-        <script src="./script.js"></script>
-    </body>
+  <head>
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>I do not understand</h1>
+    <form class="anotar" id="form">
+      <input
+        type="text"
+        placeholder="O que você precisa comprar?"
+        size="30"
+        required
+        id="item"
+      />
+      <p>Onde comprar?</p>
+      <input type="radio" id="oob" value="oob" name="onde" />
+      <label for="oob">Öob</label>
+      <input type="radio" id="normal" value="normal" name="onde" />
+      <label for="normal">Normal</label>
+      <input type="radio" id="mercado" value="mercado" name="onde" />
+      <label for="mercado">Mercado</label>
+      <input type="radio" id="outro" value="outro" name="onde" class="onde" />
+      <label for="outro" class="onde">Outro</label>
+      <br />
+      <label for="prioridade">Prioridade:</label>
+      <input type="range" name="prioridade" id="prioridade" min="0" max="10" />
+      <button type="submit" onclick="colocarNaLista()">
+        Adicionar a lista
+      </button>
+    </form>
+    <section class="listas">
+      <div class="lugar mercado">
+        <h2>Mercado</h2>
+        <p id="lista-mercado"></p>
+      </div>
+      <div class="lugar oob" id="lugarOob">
+        <h2>Öob</h2>
+        <ul id="lista-oob"></ul>
+      </div>
+      <div class="lugar normal">
+        <h2>Normal</h2>
+        <p id="lista-normal"></p>
+      </div>
+      <div class="lugar outro">
+        <h2>Outro</h2>
+        <p id="lista-outro"></p>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
 </html>
