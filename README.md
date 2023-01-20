@@ -1,4 +1,4 @@
-## Shopping List - NOT READY YET
+## Shopping List 
 
 This project goal's was to create a shopping list where you can add items and where to buy it. 
 
