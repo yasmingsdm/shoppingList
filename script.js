@@ -15,11 +15,11 @@ function colocarNaLista(){
 
     let onde = ''
 
-    if (document.getElementById('oob').checked == true){
+    if (document.getElementById('oob').checked === true){
         onde = 'oob'
-    } else if (document.getElementById('mercado').checked == true){
+    } else if (document.getElementById('mercado').checked === true){
         onde = 'mercado'
-    } else if (document.getElementById('normal').checked == true){
+    } else if (document.getElementById('normal').checked === true){
         onde = 'normal'
     } else {
         onde = 'outro'
@@ -39,29 +39,27 @@ function colocarNaLista(){
    
 
     //Escrever na coluna certa:
+    let itemId = Math.random()
     if (onde=='oob'){
         itemOob.push(item)
-        document.getElementById('lista-oob').innerHTML += '<li onClick=item1(item.value) id='+ item +'>' + item + '</li>'
+        document.getElementById('lista-oob').innerHTML += `<li onClick=item1(${itemId}) id='${itemId}'>${item}</li>`
     } else if (onde == 'normal'){
         itemNormal.push(item)
-        document.getElementById('lista-normal').innerHTML += '<li onClick=item1(item.value) id=' + item +'>' + item + '</li>'
+        document.getElementById('lista-normal').innerHTML += `<li onClick=item1(${itemId}) id='${itemId}'>${item}</li>`
     } else if (onde == 'mercado'){
         itemMercado.push(item)
-        document.getElementById('lista-mercado').innerHTML += '<li onClick=item1(item.value) id=' + item +'>' + item + '</li>'
+        document.getElementById('lista-mercado').innerHTML += `<li onClick=item1(${itemId}) id='${itemId}'>${item}</li>`
     }else if (onde == 'outro'){
         itemOutro.push(item)
-        document.getElementById('lista-outro').innerHTML += '<li onClick=item1(item.value) id=' + item +'>' + item + '</li>'
+        document.getElementById('lista-outro').innerHTML += `<li onClick=item1(${itemId}) id='${itemId}'>${item}</li>`
     }
 
 }
 
 //Riscar a lista:
 
-const item1 = (item) => {
-    console.log(item)
-    document.getElementById(item).style.textDecoration = 'line-through'
-    item = ''
-
+const item1 = (itemId) => {
+    document.getElementById(itemId).style.textDecoration = 'line-through'
 }
 
 //Apagar lista:
