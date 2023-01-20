@@ -7,6 +7,7 @@ I used HTML, CSS and JavaScript.
 #### What I've practiced/learned:
 - Range and radio input (HTML);
 - Style range input (CSS);
+- Responsive design (CSS);
 - Grid display(CSS);
 - Switch (JavaScript);
 - Prevent to refresh the page (JavaScript);
@@ -18,12 +19,7 @@ I used HTML, CSS and JavaScript.
 - Requesting code review (GitHub).
 
 
-You can check the project ready NOT READY YET
-
-#### What I plan to do:
-- Responsive Design;
-- Line through just on the item you click;
-- Connect with an api.
+You can check the project [here](https://yasmingsdm.github.io/shoppingList/)
 
 
 Code reviewer: [Vanessa Sue Smith](https://github.com/VanessaSue27)
