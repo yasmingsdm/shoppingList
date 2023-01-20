@@ -55,3 +55,10 @@ button{
     border: dotted 2px #800020;
     text-align: center;
 }
+
+/* Responsive Design: */
+@media screen and (max-width:1200px) {
+    .listas{
+        grid-template-columns: 1fr;
+    }
+}
